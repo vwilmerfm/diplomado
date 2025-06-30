@@ -3,6 +3,9 @@ import {User} from "../models/user.js";
 import logger from '../logs/logger.js';
 import {Task} from "../models/task.js";
 
+import { Op } from 'sequelize';
+// import Op from 'sequelize';
+
 async function getUsers(req, res, next) {
     try {
         const users = await User.findAll({
